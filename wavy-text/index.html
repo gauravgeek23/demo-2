@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wavy Text</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; background: #0e0e12; overflow: hidden; font-family: system-ui, sans-serif; }
+    #panel {
+      position: fixed; top: 12px; left: 12px; z-index: 10;
+      background: rgba(20, 20, 28, 0.85); color: #eee;
+      padding: 12px 14px; border-radius: 10px; font-size: 13px; line-height: 1.5;
+      min-width: 240px;
+    }
+    #panel label { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; }
+    #panel input[type=range] { width: 100%; }
+    #panel input[type=text] { width: 100%; box-sizing: border-box; margin-top: 4px; padding: 4px 6px;
+      background: #1c1c26; color: #fff; border: 1px solid #444; border-radius: 6px; }
+    #panel .keys { margin-top: 8px; color: #aaa; font-size: 12px; }
+    #panel.hidden { display: none; }
+    #panel kbd { background: #2a2a38; border-radius: 4px; padding: 0 5px; color: #fff; }
+  </style>
+</head>
+<body>
+  <div id="panel"></div>
+  <script src="sketch.js"></script>
+</body>
+</html>
