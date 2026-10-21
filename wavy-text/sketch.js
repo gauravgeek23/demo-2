@@ -148,8 +148,29 @@ function change(name, delta) {
 }
 
 // ---------- UI ----------
+// The panel and its styles are created here, so this file works on its own
+// (e.g. pasted straight into editor.p5js.org) without any extra HTML.
+const PANEL_CSS = `
+html, body { margin: 0; padding: 0; background: #0e0e12; overflow: hidden; font-family: system-ui, sans-serif; }
+#panel {
+  position: fixed; top: 12px; left: 12px; z-index: 10;
+  background: rgba(20, 20, 28, 0.85); color: #eee;
+  padding: 12px 14px; border-radius: 10px; font-size: 13px; line-height: 1.5;
+  min-width: 240px;
+}
+#panel label { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; }
+#panel input[type=range] { width: 100%; }
+#panel input[type=text] { width: 100%; box-sizing: border-box; margin-top: 4px; padding: 4px 6px;
+  background: #1c1c26; color: #fff; border: 1px solid #444; border-radius: 6px; }
+#panel .keys { margin-top: 8px; color: #aaa; font-size: 12px; }
+#panel.hidden { display: none; }
+#panel kbd { background: #2a2a38; border-radius: 4px; padding: 0 5px; color: #fff; }
+  
+`;
+
 function buildUI() {
-  const panel = select('#panel');
+  createElement('style', PANEL_CSS);
+  const panel = select('#panel') || createDiv().id('panel');
   createDiv('<b>Wavy Text</b>').parent(panel);
 
   ui.text = createInput(settings.txt).parent(panel);
