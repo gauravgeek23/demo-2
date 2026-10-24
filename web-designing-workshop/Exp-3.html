@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Timetable - CSE Department</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: white;
+            margin: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 14px 10px;
+            height: 45px;
+        }
+
+        th {
+            font-weight: bold;
+            background-color: #f5f5f5;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+
+        .day {
+            font-weight: bold;
+            width: 12%;
+        }
+
+        .lab-details {
+            padding: 8px;
+        }
+
+        .lab-details table {
+            width: 90%;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        .lab-details th,
+        .lab-details td {
+            border: 2px solid black;
+            padding: 8px;
+            height: auto;
+        }
+
+        .lab-title {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>College Timetable</h2>
+    <h3>College Timetable - CSE Department</h3>
+
+    <table>
+
+        <!-- Header -->
+        <tr>
+            <th>Day / Time</th>
+            <th>9:00 - 10:00</th>
+            <th>10:00 - 11:00</th>
+            <th>11:00 - 12:00</th>
+            <th>12:00 - 1:00</th>
+            <th>1:00 - 2:00</th>
+            <th>2:00 - 3:00</th>
+            <th>3:00 - 4:00</th>
+        </tr>
+
+        <!-- Monday -->
+        <tr>
+            <td class="day">Monday</td>
+
+            <td rowspan="2">Mathematics</td>
+
+            <td>English</td>
+
+            <td rowspan="3">Physics</td>
+
+            <td>Break</td>
+
+            <td colspan="2">Computer Lab</td>
+
+            <td>Sports</td>
+        </tr>
+
+        <!-- Tuesday -->
+        <tr>
+            <td class="day">Tuesday</td>
+
+            <td>C<br>Programming</td>
+
+            <td>Break</td>
+
+            <td colspan="2">Electronics Lab</td>
+
+            <td>Library</td>
+        </tr>
+
+        <!-- Wednesday -->
+        <tr>
+            <td class="day">Wednesday</td>
+
+            <td>Mathematics</td>
+
+            <td>English</td>
+
+            <td>Break</td>
+
+            <td>Computer<br>Networks</td>
+
+            <td colspan="2" rowspan="1" class="lab-details">
+
+                <table>
+                    <tr>
+                        <th colspan="2" class="lab-title">
+                            Lab Details
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <td>Batch A</td>
+                        <td>DBMS Lab</td>
+                    </tr>
+
+                    <tr>
+                        <td>Batch B</td>
+                        <td>OS Lab</td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+
+        <!-- Thursday -->
+        <tr>
+            <td class="day">Thursday</td>
+
+            <td colspan="2">Workshop</td>
+
+            <td>Physics</td>
+
+            <td>Break</td>
+
+            <td>Mathematics</td>
+
+            <td>English</td>
+
+            <td>Seminar</td>
+        </tr>
+
+        <!-- Friday -->
+        <tr>
+            <td class="day">Friday</td>
+
+            <td>Computer<br>Networks</td>
+
+            <td>English</td>
+
+            <td>Physics</td>
+
+            <td>Break</td>
+
+            <td colspan="3">Project Work</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
